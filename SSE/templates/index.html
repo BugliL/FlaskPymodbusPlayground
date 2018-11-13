@@ -1,0 +1,15 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test SSE</title>
+    <script type="text/javascript">
+        var eventSource = new EventSource("/alarms");
+        eventSource.onmessage = (function(event) {
+            console.log(event.data)
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
